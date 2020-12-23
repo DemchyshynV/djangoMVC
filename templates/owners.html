@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Owners
+{% endblock %}
+
+{% block body %}
+    {% for owner in owners %}
+        <div>Id: {{ owner.id }}</div>
+        <div>Name: {{ owner.name }}</div>
+        <div>Age: {{ owner.age }}</div>
+        <div>City: {{ owner.city }}</div>
+        <hr>
+    {% endfor %}
+
+{% endblock %}
