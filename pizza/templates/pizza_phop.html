@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block options %}
+    <link rel="stylesheet" href="{% static 'css/css.css' %}">
+{% endblock %}
+{% block title %}
+    PizzaShop
+{% endblock %}
+
+{% block body %}
+    <img src="{% static 'img/1.jpg' %}" alt="">
+    {% for shop in pizza_shops %}
+        <h2><a href="{% url 'pizza' shop.id %}">{{ shop.name }}</a></h2>
+        <div>{{ shop.description }}</div>
+        <div>{{ shop.rating }}</div>
+    {% endfor %}
+    <form method="get">
+    {% csrf_token %}
+    {{ form.as_p }}
+        <input type="submit" value="Сделать заказ">
+    </form>
+{% endblock %}
