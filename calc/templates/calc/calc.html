@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Calc
+{% endblock %}
+{% block options %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+{% block body %}
+    {% if res %}
+        <h1>{{ res }}</h1>
+    {% else %}
+        <h1>На ноль делить нельзя</h1>
+    {% endif %}
+{% endblock %}

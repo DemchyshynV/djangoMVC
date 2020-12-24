@@ -5,7 +5,7 @@ from .models import PetModel, OwnerModel
 
 # Create your views here.
 def home(request):
-    return render(request, 'base.html')
+    return render(request, 'index.html')
 
 
 def owners(request):
