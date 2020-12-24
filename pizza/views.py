@@ -24,7 +24,7 @@ def pizza_shop(request):
         if form.is_valid():
             form.save()
 
-    return render(request, 'pizza_phop.html', {'pizza_shops': qs, 'form': form})
+    return render(request, 'pizza/pizza_phop.html', {'pizza_shops': qs, 'form': form})
 
 
 # def pizza(request, string, id):
@@ -39,4 +39,4 @@ def pizza(request, id):
     except Exception:
         qs = None
     print(qs)
-    return render(request, 'pizza.html', {'pizzas': qs})
+    return render(request, 'pizza/pizza.html', {'pizzas': qs})

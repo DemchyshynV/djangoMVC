@@ -14,7 +14,7 @@
         <div>{{ shop.description }}</div>
         <div>{{ shop.rating }}</div>
     {% endfor %}
-    <form method="get">
+    <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
         <input type="submit" value="Сделать заказ">
